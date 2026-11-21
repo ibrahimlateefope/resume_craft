@@ -9,7 +9,7 @@ export const Experiences = ({ experiences, setExperiences }) => {
         role: "",
         company: "",
         location: "",
-        responsibilities: "",
+        description: "",
         startDate: "",
         endDate: "",
       },

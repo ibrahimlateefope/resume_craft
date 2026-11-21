@@ -15,11 +15,18 @@ export const GeneralInfo = ({ generalInfo, setGeneralInfo }) => {
       autoComplete: "family-name",
     },
     {
-      key: "address",
-      label: "House Address",
+      key: "city",
+      label: "City",
       type: "text",
-      placeholder: "e.g., 123 Main Street",
-      autoComplete: "street-address",
+      placeholder: "e.g., Tokyo",
+      autoComplete: "city",
+    },
+    {
+      key: "country",
+      label: "Country",
+      type: "text",
+      placeholder: "e.g., Nigeria",
+      autoComplete: "country",
     },
     {
       key: "tel",

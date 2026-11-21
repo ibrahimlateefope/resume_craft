@@ -7,7 +7,7 @@ export const ExperienceEntry = ({
     { key: "role", type: "text", label: "Role", placeholder: "e.g, Team lead" },
     { key: "company", type: "text", label: "Company", placeholder: "Company Name" },
     { key: "location", type: "text", label: "Location", placeholder: "Job location" },
-    { key: "responsibilities", type: "textarea", label: "Responsibilities", placeholder: "Your responsibilities and achievements" },
+    { key: "description", type: "textarea", label: "Description", placeholder: "Job description and achievements" },
     { key: "startDate", type: "date", label: "From", placeholder: "From" },
     { key: "endDate", type: "date", label: "To", placeholder: "To" },
   ];

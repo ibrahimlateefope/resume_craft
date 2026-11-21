@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { GeneralInfo } from "./components/GeneralInfo.jsx";
-import { Summary } from "./components/Summary.jsx";
-import { Experiences } from "./components/Experiences.jsx";
-import { Education } from "./components/Education.jsx";
+import React, { useState } from "react";
+import { FormInput } from "./components/FormInput";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
     firstName: "Daniel",
     lastName: "Baker",
-    address: "",
+    city: "",
+    country: "",
     tel: "",
     email: "",
   });
@@ -35,13 +33,70 @@ function App() {
       endDate: "",
     },
   ]);
+  const [projects, setProjects] = useState([
+    {
+      id: crypto.randomUUID(),
+      name: "",
+      description: "",
+      link: "",
+      startDate: "",
+      endDate: "",
+    },
+  ]);
+  const [skills, setSkills] = useState([
+    {
+      id: crypto.randomUUID(),
+      skillName: "",
+      skillProficiency: "",
+    },
+  ]);
+  const [certifications, setCertifications] = useState([
+    {
+      id: crypto.randomUUID(),
+      name: "",
+      organization: "",
+      issueDate: "",
+      expiryDate: "",
+      url: "",
+    },
+  ]);
+  const [languages, setLanguages] = useState([
+    {
+      id: crypto.randomUUID(),
+      name: "",
+      proficiency: "Basic",
+    },
+  ]);
+  const [achievements, setAchievements] = useState([
+    {
+      id: crypto.randomUUID(),
+      title: "",
+      organization: "",
+      date: "",
+      description: "",
+    },
+  ]);
   return (
-    <>
-      <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
-      <Summary summary={summary} setSummary={setSummary} />
-      <Experiences experiences={experiences} setExperiences={setExperiences} />
-      <Education education={education} setEducation={setEducation} />
-    </>
+    <FormInput
+      generalInfo={generalInfo}
+      setGeneralInfo={setGeneralInfo}
+      summary={summary}
+      setSummary={setSummary}
+      experiences={experiences}
+      setExperiences={setExperiences}
+      education={education}
+      setEducation={setEducation}
+      projects={projects}
+      setProjects={setProjects}
+      skills={skills}
+      setSkills={setSkills}
+      certifications={certifications}
+      setCertifications={setCertifications}
+      languages={languages}
+      setLanguages={setLanguages}
+      achievements={achievements}
+      setAchievements={setAchievements}
+    />
   );
 }
 

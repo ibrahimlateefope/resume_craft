@@ -6,8 +6,8 @@ export const Summary = ({ summary, setSummary }) => {
         <textarea
           value={summary}
           onChange={(e) => setSummary(e.target.value)}
-          row={70}
-          cols={30}
+          rows={15}
+          cols={20}
         />
       </label>
     </>
